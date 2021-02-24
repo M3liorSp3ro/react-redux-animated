@@ -1,8 +1,8 @@
 import React from 'react'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
-import { About, Main, NotFound, Settings } from '../pages'
+import { About, Main, NotFound, Settings, DataList } from '../pages'
 
-import {paths} from '../constants'
+import { paths } from '../constants'
 import { NavBar } from '../components'
 
 export const Routing = () => {
@@ -18,6 +18,9 @@ export const Routing = () => {
                 </Route>
                 <Route path={paths.settings} exact>
                     <Settings />
+                </Route>
+                <Route path={paths.datalist} exact>
+                    <DataList />
                 </Route>
                 <NotFound />
             </Switch>
